@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.jee.pruebas.misha.com.mx/" xmlns:tns="http://ws.jee.pruebas.misha.com.mx/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="obtenerUsuario" type="tns:obtenerUsuario"/>
+
+  <xs:element name="obtenerUsuarioResponse" type="tns:obtenerUsuarioResponse"/>
+
+  <xs:complexType name="obtenerUsuario">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obtenerUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:usuarios" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="usuarios">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" minOccurs="0"/>
+      <xs:element name="username" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
